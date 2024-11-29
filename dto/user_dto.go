@@ -1,8 +1,8 @@
 package dto
 
 type UserRequest struct {
-	Username string `json:"username" validate:"required, min=4, max=20"`
-	Password string `json:"password" validate:"required, min=6"`
+	Username string `json:"username" binding:"required" example:"johndoe"`
+	Password string `json:"password" binding:"required" example:"securepassword"`
 }
 
 type UserResponse struct {
